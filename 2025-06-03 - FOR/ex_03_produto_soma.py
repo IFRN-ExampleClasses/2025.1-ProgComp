@@ -22,10 +22,16 @@ else:
    if intMultiplicando <= 0:
       sys.exit('ERRO: Informe Multiplicando Positivo...')
 
+   '''
    intProduto  = 0
    intContador = 1
    while intContador <= intMultiplicador:
       intProduto  += intMultiplicando
       intContador += 1
-   
+   '''
+
+   intProduto  = 0
+   for intContador in range(1, intMultiplicador):
+      intProduto  += intMultiplicando
+
    print(f'{intMultiplicador} x {intMultiplicando} = {intProduto}')

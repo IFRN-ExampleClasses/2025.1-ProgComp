@@ -21,14 +21,15 @@ else:
    if intNumero < 2:
       sys.exit(f'{intNumero}! = 1')
 
-   intFatorial = intNumero
-   
    '''
+   intFatorial = intNumero
    intAuxiliar = intNumero - 1
    while intAuxiliar >= 2:
       intFatorial *= intAuxiliar
       intAuxiliar -= 1
    '''
+   
+   intFatorial = intNumero
    for intAuxiliar in range(intNumero - 1, 1, -1):
       intFatorial *= intAuxiliar
 
