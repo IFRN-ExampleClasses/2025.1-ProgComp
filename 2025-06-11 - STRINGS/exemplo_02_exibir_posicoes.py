@@ -42,9 +42,11 @@ print(f'O texto possui {intTamanho} caracteres.')
 intQtOcorrencias = strTexto.lower().count(strPalavra)
 print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vezes no texto.')
 
-intPosicao = strTexto.lower().index(strPalavra)
-print(intPosicao)
+intPosicao = 0
+while intPosicao != -1:
+   intPosicao = strTexto.lower().find(strPalavra, intPosicao)
 
-intPosicao = strTexto.lower().index(strPalavra, intPosicao + 1)
-print(intPosicao)
+   print(intPosicao)
+
+   intPosicao += 1
 
