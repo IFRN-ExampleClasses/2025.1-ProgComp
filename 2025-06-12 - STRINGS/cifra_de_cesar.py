@@ -17,5 +17,5 @@
    EXEMPLO: 
       Digite a Mensagem .....: Olá, Mundo 2025!
       Informe o Deslocamento : 6
-      Mensagem cifrada ......: Uré2*'Sútsj&868;'
+      Mensagem cifrada ......: Urç2&S{tju&868;'
 '''
