@@ -1,5 +1,5 @@
 '''
-   Programa para detectar a quantidade de ocorrências de uma palavra (ou letra) dentro de um texto.
+   Programa para detectar as posições de uma palavra (ou letra) dentro de um texto.
 '''
 
 strTexto = 'Python é uma linguagem de programação de alto nível, interpretada e de propósito geral, ' \
@@ -34,4 +34,17 @@ strTexto = 'Python é uma linguagem de programação de alto nível, interpretad
    'e sua capacidade de adaptação a novas demandas tecnológicas garantem que Python continuará sendo uma peça central no futuro da computação.'
 
 
-strPalavra = input('Digite Palavra: ')
+strPalavra = input('Digite Palavra: ').lower().strip()
+
+intTamanho = len(strTexto)
+print(f'O texto possui {intTamanho} caracteres.')
+
+intQtOcorrencias = strTexto.lower().count(strPalavra)
+print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vezes no texto.')
+
+intPosicao = strTexto.lower().index(strPalavra)
+print(intPosicao)
+
+intPosicao = strTexto.lower().index(strPalavra, intPosicao + 1)
+print(intPosicao)
+
