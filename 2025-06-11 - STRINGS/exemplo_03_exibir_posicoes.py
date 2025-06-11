@@ -39,14 +39,12 @@ strPalavra = input('Digite Palavra: ').lower().strip()
 #intTamanho = len(strTexto)
 #print(f'O texto possui {intTamanho} caracteres.')
 
-#intQtOcorrencias = strTexto.lower().count(strPalavra)
-#print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vezes no texto.')
+intQtOcorrencias = strTexto.lower().count(strPalavra)
+print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vezes no texto.')
 
-intPosicao = 0
-while True:
+intPosicao  = 0
+for i in range(intQtOcorrencias):
    intPosicao = strTexto.lower().find(strPalavra, intPosicao)
-
-   if intPosicao == -1: break
 
    print(intPosicao)
 
