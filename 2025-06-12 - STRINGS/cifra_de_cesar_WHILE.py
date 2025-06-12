@@ -19,3 +19,21 @@
       Informe o Deslocamento : 6
       Mensagem cifrada ......: Urç2&S{tju&868;'
 '''
+import sys
+
+try:
+   strTexto        = input('Digite a mensagem ..............: ')
+   intDeslocamento = int(input('Digite o deslocamento (inteiro) : '))
+except ValueError:
+   sys.exit('ERRO: Informe um inteiro válido...')
+except Exception as e:
+   sys.exit(f'ERRO: {e}')
+else:                       
+   strTextoCifra = ''
+   intPosicao    = 0
+   while intPosicao < len(strTexto):
+      intCodigo      = ord(strTexto[intPosicao]) + intDeslocamento
+      strTextoCifra += chr(intCodigo)
+      intPosicao    += 1
+
+   print(f'\nMensagem cifrada ...............: {strTextoCifra}')
