@@ -8,5 +8,3 @@
       3) A partir da lista gerada, gere uma segunda uma lista apenas com os 
          números pares da lista;
 '''
-
-
