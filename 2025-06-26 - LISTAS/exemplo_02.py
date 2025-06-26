@@ -5,12 +5,13 @@
    [nome_do_time, jogos_vencidos, jogos_empates, jogos_derrotas, gols_marcados, gols_sofridos]
 
 
-   1) Implemente um código para adicionar a cada time (adicione ao final da sub-lista):
+   1) Implemente um código para adicionar a cada time:
 
-      a) A quantidade total de pontos, considerando que uma vitória vale 3 pontos e um 
-         empate vale 1 ponto.
+      a) Adicionar após a quantidade de derrotas a quantidade total de pontos, 
+         considerando que uma vitória vale 3 pontos e um empate vale 1 ponto.
 
-      b) O saldo de gols, que é a diferença entre gols marcados e gols sofridos.
+      b) Após a quantidade de gols sofridos o saldo de gols, que é a diferença entre 
+         gols marcados e gols sofridos.
 
       
    2) Após adicionar essas informações, ordene a lista dos times seguindo os critérios 
