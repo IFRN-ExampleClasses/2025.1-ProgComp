@@ -22,3 +22,9 @@
       5) Filtre e liste apenas os alunos aprovados;
 '''
 
+lstNomes = ['Scooby-Doo'       , 'Fred Flintstone', 'Zé Colmeia' , 'Dom Pixote'     , 
+            'Muttley'          , 'Bionicão'       , 'Tutubarão'  , 'Capitão Caverna', 
+            'Formiga Atômica'  , 'Jonny Quest'    , 'Space Ghost', 'Manda-Chuva'    , 
+            'Barney Rubble'    , 'Salsicha'       , 'Falcão Azul', 'Batatinha'      , 
+            'Penélope Charmosa', 'Pepe Legal'     , 'Catatau'    , 'Dick Vigarista' ]
+

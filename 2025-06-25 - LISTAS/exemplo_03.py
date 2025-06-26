@@ -10,6 +10,6 @@
 
          a) A primeira posição será o número anterior ao número da lista inicial;
          b) A segunda posição será o número da lista inicial; 
-         c) A terceira posição será o número seguinte ao númerio da lista inicial.
+         c) A terceira posição será o número seguinte ao número da lista inicial.
 '''
 
