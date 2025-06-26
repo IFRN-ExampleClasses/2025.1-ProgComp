@@ -28,3 +28,25 @@ lstNomes = ['Scooby-Doo'       , 'Fred Flintstone', 'Zé Colmeia' , 'Dom Pixote'
             'Barney Rubble'    , 'Salsicha'       , 'Falcão Azul', 'Batatinha'      , 
             'Penélope Charmosa', 'Pepe Legal'     , 'Catatau'    , 'Dick Vigarista' ]
 
+# ----------------------------------------------------------------------
+# Questão 01
+
+
+# ----------------------------------------------------------------------
+# Questão 02
+
+
+# ----------------------------------------------------------------------
+# Questão 03
+
+
+# ----------------------------------------------------------------------
+# Questão 04
+# TODO: Fazer na sala de aula no dia 01/07/2026
+# TODO: Pesquisar a função SORT() usando funções LAMBDA
+
+
+# ----------------------------------------------------------------------
+# Questão 04
+# TODO: Fazer na sala de aula no dia 01/07/2026
+# TODO: Pesquisar a função FILTER() usando funções LAMBDA
