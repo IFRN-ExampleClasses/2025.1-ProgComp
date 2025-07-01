@@ -21,6 +21,7 @@
 
       5) Filtre e liste apenas os alunos aprovados;
 '''
+import random
 
 lstNomes = ['Scooby-Doo'       , 'Fred Flintstone', 'Zé Colmeia' , 'Dom Pixote'     , 
             'Muttley'          , 'Bionicão'       , 'Tutubarão'  , 'Capitão Caverna', 
@@ -30,23 +31,55 @@ lstNomes = ['Scooby-Doo'       , 'Fred Flintstone', 'Zé Colmeia' , 'Dom Pixote'
 
 # ----------------------------------------------------------------------
 # Questão 01
+lstNotas_1 = list()
+lstNotas_2 = list()
 
+for _ in lstNomes:
+    lstNotas_1.append(random.randint(0, 100))
+    lstNotas_2.append(random.randint(0, 100))
 
 # ----------------------------------------------------------------------
 # Questão 02
+lstBoletins = list()
+
+for i in range(len(lstNomes)):
+    lstBoletins.append([lstNomes[i], lstNotas_1[i], lstNotas_2[i]])
 
 
 # ----------------------------------------------------------------------
 # Questão 03
+for boletim in lstBoletins:
+    media = int(round((boletim[1]*2 + boletim[2]*3) / 5, 0))
+    
+    if media >= 60:
+        situacao = 'Aprovado'
+    elif media >= 20:
+        situacao = 'Prova Final'
+    else:
+        situacao = 'Reprovado'
+    
+    #boletim.append(media)
+    #boletim.append(situacao)
+
+    boletim.extend([media, situacao])
 
 
 # ----------------------------------------------------------------------
 # Questão 04
 # TODO: Fazer na sala de aula no dia 01/07/2026
 # TODO: Pesquisar a função SORT() usando funções LAMBDA
+lstBoletins.sort(key=lambda aluno: aluno[3], reverse=True)
+
+for aluno in lstBoletins:
+    print(f'{aluno[0]:<20} ... {aluno[1]:>3} ... {aluno[2]:>3} ... {aluno[3]:>3} ... {aluno[4]}')
 
 
 # ----------------------------------------------------------------------
 # Questão 04
 # TODO: Fazer na sala de aula no dia 01/07/2026
 # TODO: Pesquisar a função FILTER() usando funções LAMBDA
+lstAprovados = list( filter(lambda aluno:aluno[4] == 'Aprovado', lstBoletins))
+
+print('-'*100)
+for aluno in lstAprovados:
+    print(f'{aluno[0]:<20} ... {aluno[1]:>3} ... {aluno[2]:>3} ... {aluno[3]:>3} ... {aluno[4]}')
