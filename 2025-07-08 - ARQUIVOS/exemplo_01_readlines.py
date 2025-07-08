@@ -9,6 +9,6 @@ except FileNotFoundError:
 except Exception as erro:
    print(f'\nERRO: {erro}')
 else:
-   strConteudo = arqLeitura.readlines()
+   lstConteudo = arqLeitura.readlines()
    arqLeitura.close()
-   print(strConteudo)
+   print(lstConteudo)
