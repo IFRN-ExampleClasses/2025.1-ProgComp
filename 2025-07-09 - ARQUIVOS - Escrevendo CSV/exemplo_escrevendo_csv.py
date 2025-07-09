@@ -5,7 +5,7 @@ strDir = os.path.dirname(__file__)
 
 # Abrindo e lendo o arquivo
 try:
-   arqLeitura = open(f'{strDir}\\times_header.csv', 'r', encoding='utf-8')
+   arqLeitura = open(f'{strDir}\\times.csv', 'r', encoding='utf-8')
 except FileNotFoundError:
    sys.exit('\nERRO: Arquivo não encontrado...')
 except Exception as erro:
