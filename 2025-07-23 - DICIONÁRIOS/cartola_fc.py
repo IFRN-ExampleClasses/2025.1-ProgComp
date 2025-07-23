@@ -47,4 +47,18 @@ else:
    lstAtletasClube.sort(key=lambda atleta: atleta['nome'])
    
    for atleta in lstAtletasClube:
-      print(f'{atleta['nome']} ({atleta['apelido']})')   
+      '''
+         dictCartola['posicoes']  = 
+         {
+            '1': {'id': 1, 'nome': 'Goleiro' , 'abreviacao': 'gol'}, 
+            '2': {'id': 2, 'nome': 'Lateral' , 'abreviacao': 'lat'}, 
+            '3': {'id': 3, 'nome': 'Zagueiro', 'abreviacao': 'zag'}, 
+            '4': {'id': 4, 'nome': 'Meia'    , 'abreviacao': 'mei'}, 
+            '5': {'id': 5, 'nome': 'Atacante', 'abreviacao': 'ata'}, 
+            '6': {'id': 6, 'nome': 'Técnico' , 'abreviacao': 'tec'}
+         }
+      '''
+      strPosicaoAtleta   = dictCartola['posicoes'][str(atleta['posicao_id'])]['nome']
+      # TODO: Obter a pontuação do atleta
+      fltPontuacaoAtleta = ...
+      print(f'{atleta['nome']} ({atleta['apelido']}) - {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')   
