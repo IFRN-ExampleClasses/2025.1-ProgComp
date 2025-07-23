@@ -32,7 +32,7 @@ else:
 
    # Obtendo o ID do clube informado
    dictInfoClube = dict(filter(lambda clube: clube[1]['nome'].lower() == strNomeClube, 
-                          dictCartola['clubes'].items())).values()
+                        dictCartola['clubes'].items())).values()
 
    if not dictInfoClube:
       sys.exit('\nAVISO: Não existe o clube informado...')
@@ -42,7 +42,8 @@ else:
 
    # Listando os atletas do Clube informado
    lstAtletasClube = list(filter(lambda atleta: atleta['clube_id'] == intIDClube, 
-                            dictCartola['atletas']))
+                          dictCartola['atletas']))
+   
    lstAtletasClube.sort(key=lambda atleta: atleta['nome'])
    
    for atleta in lstAtletasClube:
