@@ -59,6 +59,5 @@ else:
          }
       '''
       strPosicaoAtleta   = dictCartola['posicoes'][str(atleta['posicao_id'])]['nome']
-      # TODO: Obter a pontuação do atleta
-      fltPontuacaoAtleta = ...
+      fltPontuacaoAtleta = int(round(atleta['jogos_num'] * atleta['media_num'],0))
       print(f'{atleta['nome']} ({atleta['apelido']}) - {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')   

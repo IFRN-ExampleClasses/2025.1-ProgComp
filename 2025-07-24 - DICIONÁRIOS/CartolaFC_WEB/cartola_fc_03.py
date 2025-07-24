@@ -1,21 +1,18 @@
-import os, sys, json
+import sys, requests
 
-strDirApp = os.path.dirname(__file__)
+from codigos_http import *
 
-strNomeArq = f'{strDirApp}//cartola_fc_2024.json'
+strURL = 'https://api.cartolafc.globo.com/atletas/mercado'
 
 try:
-   arqInput = open(strNomeArq, 'r', encoding='utf-8')
-   strDados = arqInput.read()
-   dictCartola = json.loads(strDados)
-   arqInput.close()
-except  FileNotFoundError:
-   sys.exit('ERRO: Arquivo não existe...')
-except json.JSONDecodeError:
-   sys.exit('ERRO: O conteúdo do arquivo não está no formato correto...')
+   reqHTTP = requests.get(strURL)
 except Exception as erro:
-   sys.exit(f'ERRO: {erro}...')
+   sys.exit(f'\nERRO: {erro}')
 else:
+   dictCartola = reqHTTP.json()
+   #print(dictCartola['clubes'])
+   #exit()
+   
    #lstChaves = list(dictCartola.keys())
    #print(lstChaves) # ['clubes', 'posicoes', 'status', 'atletas']
    '''
@@ -59,6 +56,5 @@ else:
          }
       '''
       strPosicaoAtleta   = dictCartola['posicoes'][str(atleta['posicao_id'])]['nome']
-      # TODO: Obter a pontuação do atleta
-      fltPontuacaoAtleta = ...
+      fltPontuacaoAtleta = int(round(atleta['jogos_num'] * atleta['media_num'],0))
       print(f'{atleta['nome']} ({atleta['apelido']}) - {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')   
