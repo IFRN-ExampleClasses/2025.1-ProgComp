@@ -9,10 +9,8 @@ except Exception as erro:
    sys.exit(f'\nERRO: {erro}...')
 else:
    try:
-      intMediaFinal = funcoes.mediaIFRN_v1(intE1, intE2)
-      strSituacao   = funcoes.situacaoFinal(intMediaFinal)
+      tuplaAluno = funcoes.mediaIFRN_v3(intE1, intE2)
    except Exception as erro:
       print(erro)
    else:
-      print(f'\nMédia Final = {intMediaFinal}')
-      print(f'Situacao    = {strSituacao}')
+      print(tuplaAluno)
