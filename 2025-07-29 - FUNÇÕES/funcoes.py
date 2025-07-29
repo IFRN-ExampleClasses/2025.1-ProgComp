@@ -84,5 +84,3 @@ def mediaIFRN_v3(nota1:int, nota2:int) -> int:
 
    # Retornando o valor da média ao programa
    return (media, situacao)
-
-

@@ -14,3 +14,5 @@ else:
       print(erro)
    else:
       print(tuplaAluno)
+      print(f'\nMédia Final = {tuplaAluno[0]}')
+      print(f'Situacao    = {tuplaAluno[1]}')
