@@ -2,6 +2,8 @@
    Arquivo de Funções
 '''
 
+# Define quais as funções que serão visualizadas no programa que 
+# importar esse arquivo de funções
 __all__ = ['mediaIFRN_v1', 'mediaIFRN_v2', 'mediaIFRN_v3']
 
 # ----------------------------------------------------------------------
@@ -46,6 +48,8 @@ def mediaIFRN_v2(nota1:int, nota2:int) -> int:
 
 # ----------------------------------------------------------------------
 # Função que retorna a situação final do aluno
+# Esta função é "privada" (_ no início do nome da função), só pode ser 
+# acessada dentro deste arquivo
 def _situacaoFinal(media: int) -> str:
    # Verificando se o argumento informado é do tipo INT
    if not isinstance(media, int):
