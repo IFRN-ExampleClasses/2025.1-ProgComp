@@ -1,4 +1,5 @@
-import sys, funcoes
+import sys
+from funcoes import *
 
 try:
    intE1 = int(input('Informe a nota da Etapa 1: '))
@@ -9,7 +10,7 @@ except Exception as erro:
    sys.exit(f'\nERRO: {erro}...')
 else:
    try:
-      tuplaAluno = funcoes.mediaIFRN_v3(intE1, intE2)
+      tuplaAluno = mediaIFRN_v3(intE1, intE2)
    except Exception as erro:
       print(erro)
    else:

@@ -2,6 +2,8 @@
    Arquivo de Funções
 '''
 
+__all__ = ['mediaIFRN_v1', 'mediaIFRN_v2', 'mediaIFRN_v3']
+
 # ----------------------------------------------------------------------
 # Função que calcula a média do IFRN - v1.0
 def mediaIFRN_v1(nota1:int, nota2:int) -> int:
@@ -44,7 +46,7 @@ def mediaIFRN_v2(nota1:int, nota2:int) -> int:
 
 # ----------------------------------------------------------------------
 # Função que retorna a situação final do aluno
-def situacaoFinal(media: int) -> str:
+def _situacaoFinal(media: int) -> str:
    # Verificando se o argumento informado é do tipo INT
    if not isinstance(media, int):
       raise ValueError('\nERRO: O argumento \'media\' deve ser do tipo INT')
@@ -80,7 +82,7 @@ def mediaIFRN_v3(nota1:int, nota2:int) -> int:
    media = int(round((nota1*2 + nota2*3)/5,0))
    
    # Obtendo a situação final do aluno
-   situacao = situacaoFinal(media)
+   situacao = _situacaoFinal(media)
 
    # Retornando o valor da média ao programa
    return (media, situacao)
