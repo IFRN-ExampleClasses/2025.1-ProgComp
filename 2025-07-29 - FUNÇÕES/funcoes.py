@@ -73,7 +73,7 @@ def _situacaoFinal(media: int) -> str:
 
 # ----------------------------------------------------------------------
 # Função que calcula a média do IFRN - v3.0
-def mediaIFRN_v3(nota1:int, nota2:int) -> int:
+def mediaIFRN_v3(nota1:int, nota2:int) -> tuple:
    # Verificando se os argumentos informados são do tipo INT e 
    # estão entre 0 e 100
    for nota, nome in [(nota1, 'nota1'), (nota2, 'nota2')]:
